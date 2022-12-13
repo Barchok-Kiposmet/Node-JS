@@ -2,7 +2,7 @@
 const http = require("http");
 
 // Create Server
-const server = http.createServer(function (request, response) {
+const server = http.createServer( (request, response) => {
   const method = request.method;
   const path = request.url;
   const headers = request.headers;
@@ -13,11 +13,11 @@ const server = http.createServer(function (request, response) {
     headers,
   };
 
-  console.log(data);
+//   console.log(data);
 
-  response.end("Server up and running");
+  response.end("This is working");
 });
 
 server.listen(3000, () => {
-  console.log("My server is running");
+  console.log("Server started");
 });
