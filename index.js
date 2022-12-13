@@ -14,7 +14,7 @@ const server = http.createServer(function(request, response) {
 
     console.log(data)
 
-    response.end('<p>Success</p>');
+    response.end('Server up and running');
 });
 
 server.listen(3000, function () {
