@@ -17,6 +17,6 @@ const server = http.createServer(function(request, response) {
     response.end('Server up and running');
 });
 
-server.listen(3000, function () {
+server.listen(3000,  () => {
     console.log('My server is running');
 });
