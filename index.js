@@ -18,6 +18,7 @@ const server = http.createServer( (request, response) => {
   response.end("This is working");
 });
 
+// NB use actual numbers between 3000-5000 as they are always free
 server.listen(3000, () => {
   console.log("Server started");
 });
