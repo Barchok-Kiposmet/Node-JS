@@ -85,3 +85,9 @@ const server = http.createServer(function (request, response) {
 server.listen(3000, () => {
   console.log("The server is running");
 });
+
+// this starts the server from the server.js file which was wrapped in the start function.
+
+let server = require("./server");
+
+server.start();

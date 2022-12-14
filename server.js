@@ -28,13 +28,18 @@ http.createServer(onRequest).listen(8000);
 
 let http = require("http");
 
-function onRequest(request, response) {
-  console.log("Request received!");
-  response.writeHead(200, { "Content-type": "text/plain" });
-  response.write("Hello World");
-  response.end();
-}
+// this wraps the server in a function to be run in an index.js file
+let start = function () {
+  function onRequest(request, response) {
+    console.log("Request received!");
+    response.writeHead(200, { "Content-type": "text/plain" });
+    response.write("Hello World");
+    response.end();
+  }
 
-http.createServer(onRequest).listen(8000);
+  http.createServer(onRequest).listen(8000);
 
-console.log("Server has started.");
+  console.log("Server has started.");
+};
+
+exports.start = start;
