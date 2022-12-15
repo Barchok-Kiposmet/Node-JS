@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Barchok-Kiposmet/Node-JS/issues"
   },
-  "homepage": "https://github.com/Barchok-Kiposmet/Node-JS#readme"
+  "homepage": "https://github.com/Barchok-Kiposmet/Node-JS#readme",
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  }
 }
