@@ -27,21 +27,23 @@
 // asynchronus functions, execute before calling the functions.
 
 let http = require("http");
-let url = require('url');
-const { route } = require("./router");
+let url = require("url");
 
-// this wraps the server in a function to be run in an index.js file
+
+// A function to wrap our server functionality so that we can export it
 let start = function (route, handle) {
   function onRequest(request, response) {
-    let pathname = url.parse(request.url).pathname
-    console.log(pathname);
-    console.log("Request received!");
+    // Extracting the pathname from the url requested
+    let pathname = url.parse(request.url).pathname;
+    console.log("Request for " + pathname + " has been received.");
 
-    route(pathname);
+    // Passing the pathname as a parameter to the route function
+    route(handle, pathname);
+
     response.writeHead(200, { "Content-type": "text/plain" });
     response.write("Hello World");
     response.end();
-  };
+  }
 
   http.createServer(onRequest).listen(8000);
 
