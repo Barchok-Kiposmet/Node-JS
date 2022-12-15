@@ -1,0 +1,20 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "#### Working on the server side. Project done by Patrick Kiposmet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barchok-Kiposmet/Node-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barchok-Kiposmet/Node-JS/issues"
+  },
+  "homepage": "https://github.com/Barchok-Kiposmet/Node-JS#readme"
+}
