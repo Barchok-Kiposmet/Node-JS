@@ -1,7 +1,5 @@
 // function for handling index.html the business logic 
-function index (data, callback){
-  const fileData = fs.readFileSync('index.html');
-  callback(200, fileData.toString());
+function index (){
   console.log("Request handler for index was called.")
 }
 
